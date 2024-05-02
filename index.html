@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Do you still love me?</title>
+<style>
+  body {
+    background-color: #f2f2f2; /* chill white background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+  }
+  .container {
+    text-align: center;
+  }
+  .question {
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Arial', sans-serif; /* normal font */
+  }
+  .buttons {
+    display: flex;
+    justify-content: center; /* center the buttons */
+    align-items: center;
+    margin-top: 20px;
+  }
+  .button {
+    color: black;
+    border-radius: 20px; /* border radius */
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-weight: bold; /* bold font */
+    margin: 0 10px; /* space between buttons */
+  }
+  .yes {
+    background-color: green;
+  }
+  .no {
+    background-color: red;
+  }
+  .love-message {
+    display: none;
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    margin-top: 20px;
+  }
+  .images {
+    display: none;
+    margin-top: 20px;
+  }
+  .image {
+    width: 100px;
+    height: auto;
+    margin: 0 10px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="question" id="question">Do you still love me?</div>
+  <div class="buttons">
+    <button class="button yes" onclick="showLove()">Yes</button>
+    <button class="button no" onclick="confirmNo()">No</button>
+  </div>
+  <div class="love-message" id="loveMessage">I love you too martina</div>
+  <div class="images">
+    <img class="image" src="https://x0.at/-VwW.png" alt="First Image">
+    <img class="image" src="https://x0.at/gpXI.png" alt="Second Image">
+  </div>
+</div>
+
+<script>
+  function confirmNo() {
+    document.querySelector('.no').style.display = "none"; // hide the No button
+    document.querySelector('.yes').style.transform = "scale(1.5)"; // make the Yes button bigger
+    document.querySelector('.yes').style.margin = "auto"; // center the Yes button
+    document.querySelector('.yes').style.display = "block"; // display the Yes button if hidden
+  }
+
+  function showLove() {
+    document.querySelector('.yes').style.display = "none"; // hide the Yes button
+    document.querySelector('.no').style.display = "none"; // hide the No button
+    document.querySelector('.question').style.display = "none"; // hide the question
+    document.querySelector('.love-message').style.display = "block"; // show the love message
+    document.querySelector('.images').style.display = "flex"; // show the images
+  }
+</script>
+</body>
+</html>
